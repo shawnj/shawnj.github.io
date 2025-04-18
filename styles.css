@@ -1,0 +1,387 @@
+/* Modern Tarot Music Matcher Theme */
+:root {
+    /* Color palette */
+    --bg-gradient-start: #0f0c29;
+    --bg-gradient-mid: #302b63;
+    --bg-gradient-end: #24243e;
+    --accent-color: #e9a905;
+    --accent-hover: #ffbe0b;
+    --text-primary: #f8f9fa;
+    --text-secondary: #ced4da;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --button-primary: #8257e5;
+    --button-primary-hover: #9466ff;
+    --button-secondary: #3a86ff;
+    --button-secondary-hover: #4e95ff;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-mid), var(--bg-gradient-end));
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #f8d568, #e9a905, #ffbe0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(233, 169, 5, 0.3);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.card-container {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.draw-button {
+    background: var(--button-primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(130, 87, 229, 0.4);
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.draw-button:hover {
+    background: var(--button-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(130, 87, 229, 0.6);
+}
+
+.btn-icon {
+    font-size: 1.4rem;
+}
+
+.secondary-button {
+    background: var(--button-secondary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.secondary-button:hover {
+    background: var(--button-secondary-hover);
+    transform: translateY(-2px);
+}
+
+.reset-button {
+    background: var(--button-primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(130, 87, 229, 0.3);
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto; /* Ensure the button isn't constrained */
+    z-index: 10; /* Make sure it's above other elements */
+    position: relative; /* Enable z-index */
+}
+
+.reset-button:hover {
+    background: var(--button-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(130, 87, 229, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card, .song {
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card-image-container {
+    margin-bottom: 1.5rem;
+    perspective: 1000px;
+    transition: transform 0.6s;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.song {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.song h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#song-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#song-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+}
+
+#song-artist {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--text-secondary), transparent);
+    margin: 0.5rem 0 1.5rem;
+}
+
+#song-reason {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    flex-grow: 1;
+}
+
+#song-link a {
+    color: var(--button-secondary);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid var(--button-secondary);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#song-link a:hover {
+    background-color: var(--button-secondary);
+    color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Animation for card appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#card-display:not(.hidden) {
+    animation: fadeIn 0.6s ease-out;
+}
+
+#initial-view {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Button group for side-by-side buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap; /* For mobile responsiveness */
+}
+
+/* Style for the Listen button - changing from filled to outline */
+.listen-button {
+    color: var(--button-secondary);
+    background-color: transparent; /* Make background transparent */
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border: 2px solid var(--button-secondary); /* Make border slightly thicker for better visibility */
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 150px;
+}
+
+.listen-button:hover {
+    background-color: rgba(58, 134, 255, 0.1); /* Subtle background on hover */
+    color: var(--accent-color); /* Change text color on hover */
+    border-color: var(--accent-color); /* Change border color on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(58, 134, 255, 0.15);
+}
+
+/* Style for the inline Get Another Song button */
+.new-song-button {
+    background: var(--button-primary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(130, 87, 229, 0.3);
+    flex: 1;
+    min-width: 150px;
+}
+
+.new-song-button:hover {
+    background: var(--button-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(130, 87, 229, 0.4);
+}
+
+/* Media query for better button layout on smaller screens */
+@media (max-width: 500px) {
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+/* Card transition effect when drawing a new card */
+.card-transition {
+    animation: cardTransition 0.6s ease-out;
+}
+
+@keyframes cardTransition {
+    0% { opacity: 0.7; transform: scale(0.98); }
+    50% { opacity: 0.9; }
+    100% { opacity: 1; transform: scale(1); }
+}

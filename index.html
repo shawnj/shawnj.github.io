@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Tunes - Match Tarot Cards with Music</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tarot Tunes</h1>
+            <p class="tagline">Discover the music that matches your destiny</p>
+        </header>
+        
+        <main>
+            <div class="card-container">
+                <div id="initial-view">
+                    <p class="intro-text">Draw a card to discover your musical destiny</p>
+                    <button id="draw-card" class="draw-button">
+                        <span class="btn-text">Draw a Card</span>
+                        <span class="btn-icon">✨</span>
+                    </button>
+                </div>
+                
+                <div id="card-display" class="hidden">
+                    <div class="results-grid">
+                        <div class="card-section">
+                            <div class="card">
+                                <div class="card-image-container">
+                                    <img id="card-image" src="" alt="Tarot Card">
+                                </div>
+                                <h2 id="card-name"></h2>
+                                <p id="card-meaning"></p>
+                                <button id="reset" class="reset-button">
+                                    <span class="btn-text">Draw a New Card</span>
+                                    <span class="btn-icon">✨</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="song-section">
+                            <div class="song">
+                                <h3>Your Matching Song</h3>
+                                <div id="song-info">
+                                    <p id="song-name"></p>
+                                    <p id="song-artist"></p>
+                                    <div class="divider"></div>
+                                    <p id="song-reason"></p>
+                                    <div id="song-link"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>The cards reveal the music of your soul</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
