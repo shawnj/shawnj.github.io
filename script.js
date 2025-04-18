@@ -3,133 +3,133 @@ const tarotCards = [
     {
         id: 0,
         name: "The Fool",
-        image: "https://www.trustedtarot.com/img/cards/the-fool.png",
+        image: "images/the-fool.png",
         meaning: "New beginnings, spontaneity, innocence, and a free spirit. The Fool represents taking a leap of faith into the unknown."
     },
     {
         id: 1,
         name: "The Magician",
-        image: "https://www.trustedtarot.com/img/cards/the-magician.png",
+        image: "images/the-magician.png",
         meaning: "Manifestation, resourcefulness, and inspired action. The Magician represents harnessing one's talents to achieve goals."
     },
     {
         id: 2,
         name: "The High Priestess",
-        image: "https://www.trustedtarot.com/img/cards/the-high-priestess.png",
+        image: "images/the-high-priestess.png",
         meaning: "Intuition, sacred knowledge, and divine feminine energy. The High Priestess represents trusting your inner voice."
     },
     {
         id: 3,
         name: "The Empress",
-        image: "https://www.trustedtarot.com/img/cards/the-empress.png",
+        image: "images/the-empress.png",
         meaning: "Femininity, nurturing, fertility, and abundance. The Empress represents creation and growth."
     },
     {
         id: 4,
         name: "The Emperor",
-        image: "https://www.trustedtarot.com/img/cards/the-emperor.png",
+        image: "images/the-emperor.png",
         meaning: "Authority, structure, control, and fatherhood. The Emperor represents leadership and stability."
     },
     {
         id: 5,
         name: "The Hierophant",
-        image: "https://www.trustedtarot.com/img/cards/the-hierophant.png",
+        image: "images/the-hierophant.png",
         meaning: "Tradition, conformity, morality, and ethics. The Hierophant represents following established paths."
     },
     {
         id: 6,
         name: "The Lovers",
-        image: "https://www.trustedtarot.com/img/cards/the-lovers.png",
+        image: "images/the-lovers.png",
         meaning: "Love, harmony, relationships, and choices. The Lovers represent connection and alignment of values."
     },
     {
         id: 7,
         name: "The Chariot",
-        image: "https://www.trustedtarot.com/img/cards/the-chariot.png",
+        image: "images/the-chariot.png",
         meaning: "Control, willpower, determination, and success. The Chariot represents overcoming obstacles through focus."
     },
     {
         id: 8,
         name: "Strength",
-        image: "https://www.trustedtarot.com/img/cards/strength.png",
+        image: "images/strength.png",
         meaning: "Courage, patience, compassion, and inner strength. Strength represents gentle power and resilience."
     },
     {
         id: 9,
         name: "The Hermit",
-        image: "https://www.trustedtarot.com/img/cards/the-hermit.png",
+        image: "images/the-hermit.png",
         meaning: "Soul-searching, introspection, and inner guidance. The Hermit represents seeking deeper truth in solitude."
     },
     {
         id: 10,
         name: "Wheel of Fortune",
-        image: "https://www.trustedtarot.com/img/cards/wheel-of-fortune.png",
+        image: "images/wheel-of-fortune.png",
         meaning: "Change, cycles, fate, and turning points. The Wheel of Fortune represents life's unpredictable nature."
     },
     {
         id: 11,
         name: "Justice",
-        image: "https://www.trustedtarot.com/img/cards/justice.png",
+        image: "images/justice.png",
         meaning: "Fairness, truth, cause and effect, and law. Justice represents accountability and balance."
     },
     {
         id: 12,
         name: "The Hanged Man",
-        image: "https://www.trustedtarot.com/img/cards/the-hanged-man.png",
+        image: "images/the-hanged-man.png",
         meaning: "Surrender, letting go, new perspectives. The Hanged Man represents seeing from a different angle."
     },
     {
         id: 13,
         name: "Death",
-        image: "https://www.trustedtarot.com/img/cards/death.png",
+        image: "images/death.png",
         meaning: "Endings, transformation, and transition. Death represents the end of a cycle and the beginning of something new."
     },
     {
         id: 14,
         name: "Temperance",
-        image: "https://www.trustedtarot.com/img/cards/temperance.png",
+        image: "images/temperance.png",
         meaning: "Balance, moderation, patience, and purpose. Temperance represents finding middle ground and harmony."
     },
     {
         id: 15,
         name: "The Devil",
-        image: "https://www.trustedtarot.com/img/cards/the-devil.png",
+        image: "images/the-devil.png",
         meaning: "Addiction, materialism, playfulness, and restriction. The Devil represents being chained to desires."
     },
     {
         id: 16,
         name: "The Tower",
-        image: "https://www.trustedtarot.com/img/cards/the-tower.png",
+        image: "images/the-tower.png",
         meaning: "Sudden upheaval, revelation, and awakening. The Tower represents breaking down false structures."
     },
     {
         id: 17,
         name: "The Star",
-        image: "https://www.trustedtarot.com/img/cards/the-star.png",
+        image: "images/the-star.png",
         meaning: "Hope, faith, rejuvenation, and serenity. The Star represents inspiration and optimism."
     },
     {
         id: 18,
         name: "The Moon",
-        image: "https://www.trustedtarot.com/img/cards/the-moon.png",
+        image: "images/the-moon.png",
         meaning: "Illusion, fear, subconscious, and uncertainty. The Moon represents navigating through the unknown."
     },
     {
         id: 19,
         name: "The Sun",
-        image: "https://www.trustedtarot.com/img/cards/the-sun.png",
+        image: "images/the-sun.png",
         meaning: "Joy, success, celebration, and positivity. The Sun represents the warmth of accomplishment and happiness."
     },
     {
         id: 20,
         name: "Judgement",
-        image: "https://www.trustedtarot.com/img/cards/judgement.png",
+        image: "images/judgement.png",
         meaning: "Reflection, reckoning, awakening, and rebirth. Judgement represents evaluation and spiritual growth."
     },
     {
         id: 21,
         name: "The World",
-        image: "https://www.trustedtarot.com/img/cards/the-world.png",
+        image: "images/the-world.png",
         meaning: "Completion, integration, accomplishment, and travel. The World represents fulfillment and harmony."
     }
 ];
